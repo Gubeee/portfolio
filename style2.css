@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+:root{
+    --bg-color: rgb(0, 0, 75);
+    --font-color: #ffffff;
+    --font-hover: rgb(191, 211, 248);
+    --box-shadow: 0px 0px 1em rgb(95, 95, 95);
+    --box-shadow-hover: 0px 0px 3em rgb(95, 95, 95);
+}
+html{
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    color: var(--font-color);
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.header{
+    font-weight: 400;
+    text-align: center;
+}
+.header h1{
+    margin: 4em;
+    padding: .3em;
+    font-size: 1.4em;
+}
+
+.nav{
+    font-size: 1em;
+    font-weight: 400;
+    width: 100%;
+    height: 23em;
+    display: grid;
+    justify-content: center;
+    gap: 2em;
+    grid-template-columns: repeat(2, 10em);
+    text-align: center;
+}
+.nav a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+.nav .block{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    box-shadow: var(--box-shadow);
+    transition: .3s ease-in-out;
+}
+.nav .block .material-icons-sharp{
+    font-size: 2em;
+    transition: .3s ease-in-out;
+}
+.nav .block:focus{
+    box-shadow: var(--box-shadow-hover);
+}
+.nav .block:focus .material-icons-sharp{
+    font-size: 6em;
+}
+
+main{
+    margin-top: 20em;
+    margin-left: 1.5em;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+}
+main span{
+    font-weight: 200;
+}
+main a{
+    color: var(--font-color);
+}
+main a:visited{
+    color: var(--font-color);
+}
+
+main section{
+    width: 87%;
+    height: 100%;
+}
+.card{
+    padding: 2em;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+    text-align: center;
+}
+
+#music-box #beats, #music-box #tracks,
+#music-box #mixmaster{
+    padding-top: 2em;
+}
+
+.cont-card{
+    padding-top: 2em;
+}
+.cont-card .material-icons-sharp{
+    font-size: 6em;
+}
+
+footer{
+    position: relative;
+    top: 230%;
+    text-align: center;
+}

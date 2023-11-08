@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html  lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="projektowanie, stron, www, html, css, js, sass, scss, produkcja, muzyki, mix, master, beat, produkcja, fl studio, ableton, studio one, cubase, pro tools">
+    
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet" />
+
+    <title>Gv83 - Portfolio</title>
+</head>
+<body>
+    <section class="header">
+        <h1>Gv83 - Portfolio</h1>
+    </section>
+    <section class="nav">
+        <a href="#about">
+            <div class="block">
+                <span class="material-icons-sharp">
+                    person
+                </span>
+                <h3>O mnie</h3>
+            </div> 
+        </a>
+        <a href="#projects">
+            <div class="block">
+                <span class="material-icons-sharp">
+                    code
+                </span>
+                <h3>Projekty</h3>
+            </div>
+        </a>
+        <a href="#music">
+            <div class="block">
+                <span class="material-icons-sharp">
+                    audiotrack
+                </span>
+                <h3>Muzyka</h3>
+            </div>
+        </a>
+        <a href="#contact">
+            <div class="block">
+                <span class="material-icons-sharp">
+                    contacts
+                </span>
+                <h3>Kontakt</h3>
+            </div>
+        </a>
+    </section>
+    <main>
+        <section id="about">
+            <div class="card">
+                <h1>O mnie</h1>
+                <span class="card-text">
+                    Witaj! Nazywam się Mateusz, skończyłem technikum informatyczne i idę na studia o tym samym kierunku. Interesuję się głównie projektowaniem stron oraz tworzeniem sieci, szeroko pojętą produkcją muzyki (od tworzenia podkładów, po mixowanie wokali), a w wolnych chwilach spotykam się ze znajomymi i wymyślam nowe projekty stron, które możesz zobaczyć <a href="#projects">tutaj</a>.
+                </span>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="card">
+                <h1>Projekty</h1>
+                <span class="card-text">
+                    Z racji, iż jestem za bardzo pomysłowy i ciągle wymyślam nowe projekty, to poprzednie wydłużają się w czasie. Aktualnie, moim jedynym projektem, jest to portfolio i pracuję nad platformą dla muzyków, na której będą oni mogli w bezpieczny sposób kontaktować się z inżynierami dźwięku bez strachu, że któraś ze stron zostanie oszukana.
+                </span>
+            </div>
+        </section>
+        <section id="music" class="grid-col-span-2">
+            <div class="card">
+                <h1>Muzyka</h1>
+                Produkcję muzyki mogę podzielić na trzy różne działy:
+                <div id="music-box">
+                    <div id="beats">
+                        <h2>Produckja podkładów</h2>
+                        <span class="card-text">
+                            Podkłady muzyczne, głównie rapowe, tworzę od 2019 roku. Od tego czasu, poza umiejętnościami, nic się nie zmieniło. Zaczynałem od rapu i dalej tworzę rap oraz jego odłamy. Moim marzeniem jest współpracowanie z topowymi artystami - nie tylko z Polski, ale i z zagranicy.
+                            <a href="tracks/beats.html">Tutaj można sprawdzić moje produkcje.</a>
+                        </span>
+                    </div>
+                    <div id="tracks">
+                        <h2>Moje utwory</h2>
+                        <span class="card-text">
+                            Swoje utwory tworzę od 2015 roku i z każdym dniem robię coraz większy progress. Odnajduję się na wielu rodzajach beatów, przez co, ta podróż, ciągle się rozciąga. Tak jak w wypadku podkładów - moim marzeniem jest współpraca z topowymi artystami z każdego zakątka świata.
+                            <a href="tracks/tracks.html">Tutaj można sprawdzić moje utwory.</a>
+                        </span>
+                    </div>
+                    <div id="mixmaster">
+                        <h2>Mix/Master</h2>
+                        <span class="card-text">
+                            Mix/Master na początku robiłem tylko sobie. Uczyłem się obsługi wtyczek na swoich wokalach, aż pewnego dnia odezwał się do mnie znajomy z pytaniem, czy nie zrobię mu beatu i nie zmixuję numeru. Powiedziałem, że bardzo chętnie i wykorzystałem wcześniej zdobytą wiedzę, by pomóc koledze. Kilka lat później zacząłem mixować utwory osób, które odezwały się do mnie na Instagramie i liczę, że tych osób będzie więcej. <br>
+                            <a href="tracks/mixmaster.html">Tutaj można sprawdzić moje mixy.</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="grid-col-span-2">
+            <div class="card">
+                <h1>Kontakt</h1>
+                <div id="contact-card">
+                    <div class="cont-card">
+                        <span class="material-icons-sharp">
+                            mail_outline
+                        </span><br>
+                        E - mail: mixbygv83@gmail.com
+                    </div>
+                    <div class="cont-card">
+                        <iconify-icon icon="mdi:instagram" width="96"></iconify-icon><br>
+                        Instagram: gv83_
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <span id="year"></span> &copy; MixByGv83 - IT, Mix/Master, Produkcja
+    </footer>
+    <!-- DATA FOOTER-->
+    <script>
+        const date = new Date();
+        let year = date.getFullYear();
+        document.getElementById("year").innerHTML = year;
+    </script>
+    <!-- IKONA KONTAKT-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
