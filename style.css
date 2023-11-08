@@ -36,6 +36,7 @@ body {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 10em);
+  gap: 2em;
 }
 .nav * {
   color: #ffffff;
@@ -47,5 +48,13 @@ body {
 .nav .block {
   width: 10em;
   height: 10em;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 1em rgb(95, 95, 95);
+  transition: 0.2s linear;
+}
+.nav .block:hover {
+  box-shadow: 0px 0px 3em rgb(95, 95, 95);
 }/*# sourceMappingURL=style.css.map */
