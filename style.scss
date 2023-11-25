@@ -20,8 +20,8 @@ html{
 }
 body{
     color: $font-color;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
@@ -29,23 +29,17 @@ body{
     padding-top: 1em;
     width: 100%;
     height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-weight: $font-400;
-    
     h1{
         font-size: 2em;
     }
 }
-
 .nav{
     width: 100%;
-    height: 20em;
-    font-size: 1em;
-    font-weight: 400;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, 10em);
-    gap: 2em;
     *{
         color: $font-color;
     }
@@ -53,17 +47,309 @@ body{
         text-decoration: none;
         font-weight: $font-200;
     }
+    h3{
+        font-weight: $font-200;
+    }
     .block{
-        width: 10em;
-        height: 10em;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         box-shadow: $box-shadow;
         transition: .2s linear;
+        .block:hover{
+            box-shadow: $box-shadow-hover;
+        }
     }
-    .block:hover{
-        box-shadow: $box-shadow-hover;
+}
+main{
+    width: 100%;
+    height: 100%;
+    a{
+        text-decoration: underline;
+        color: white;
+    }
+    #about, #projects, #music, #contact{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .card{
+        width: 85%;
+        height: 100%;
+        text-align: center;
+        box-shadow: $box-shadow;
+        padding: 1em;
+    }
+}
+#about, #projects, #music p{
+    font-weight: $font-200;
+    font-size: 1em;
+}
+#music{
+    #beats, #tracks, #mixmaster{
+        margin-top: 1em;
+    }
+}
+footer{
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
+} 
+/* MEDIA SCREEN 631px */
+@media screen and (min-width: 400px) and (max-width: 631px) {
+    .nav{
+        margin-top: 5em;
+        height: 25em;
+        font-size: 1em;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 10em);
+        gap: 2em;
+        .block{
+            width: 10em;
+            height: 10em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .material-icons-sharp{
+            font-size: 3em;
+        }
+    }
+    main{
+        margin-top: 45em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+    #about, #projects, #music p{
+        font-weight: $font-200;
+        font-size: 1em;
+    }
+    #music{
+        #beats, #tracks, #mixmaster{
+            margin-top: 1em;
+            font-weight: $font-200;
+            font-size: 1em;
+        }
+    }
+    #contact{
+        .material-icons-sharp{
+            font-size: 2em;
+        }
+        .cont-card{
+            margin-top: 1em;
+        }
+    }  
+}
+
+/* MEDIA SCREEN 821px */
+@media screen and (min-width: 631px) and (max-width: 821px){
+    .nav{
+        margin-top: 5em;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 15em);
+        gap: 5em;
+    }
+    .block{
+        width: 15em;
+        height: 15em;
+        .material-icons-sharp{
+            font-size: 3em;
+        }
+        h3{
+            font-size: 1.5em;
+        }
+    }
+    main{
+        padding-top: 25em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .card{
+        font-size: 1.5em;
+    }
+    #about, #projects, #music p{
+        font-weight: $font-200;
+        font-size: 1em;
+    }
+    #music{
+        #beats, #tracks, #mixmaster{
+            margin-top: 1em;
+            font-weight: $font-200;
+            font-size: 1em;
+        }
+    }
+    #contact{
+        #contact-card{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+/* MEDIA SCREEN 941px */
+@media screen and (min-width: 821px) and (max-width: 1301px){
+    .nav{
+        margin-top: 5em;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 20em);
+        gap: 5em;
+    }
+    .block{
+        width: 20em;
+        height: 20em;
+        .material-icons-sharp{
+            font-size: 4em;
+        }
+        h3{
+            font-size: 2em;
+        }
+    }
+    main{
+        padding-top: 45em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .card{
+        font-size: 1.5em;
+    }
+    #about, #projects, #music p{
+        font-weight: $font-200;
+        font-size: 1em;
+    }
+    #music{
+        #beats, #tracks, #mixmaster{
+            margin-top: 1em;
+            font-weight: $font-200;
+            font-size: 1em;
+        }
+    }
+    #contact{
+        #contact-card{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+/* MEDIA SCREEN 1301px */
+@media screen and (min-width: 1301px) and (max-width: 1401px){
+    .nav{
+        margin-top: 5em;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 25em);
+        gap: 5em;
+    }
+    .block{
+        width: 25em;
+        height: 25em;
+        .material-icons-sharp{
+            font-size: 5em;
+        }
+        h3{
+            font-size: 3em;
+        }
+    }
+    main{
+        padding-top: 45em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .card{
+        font-size: 1.5em;
+    }
+    #about, #projects, #music p{
+        font-weight: $font-200;
+        font-size: 1.5em;
+    }
+    #music{
+        #beats, #tracks, #mixmaster{
+            margin-top: 1em;
+            font-weight: $font-200;
+            font-size: 1.5em;
+        }
+    }
+    #contact{
+        #contact-card{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+/* MEDIA SCREEN 1401px */
+@media screen and (min-width: 1401px) and (max-width: 1601px){
+    .nav{
+        margin-top: 5em;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2em;
+    }
+    .block{
+        width: 15em;
+        height: 15em;
+        .material-icons-sharp{
+            font-size: 4em;
+        }
+        h3{
+            font-size: 2em;
+        }
+    }
+    main{
+        padding-top: 45em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2em;
+    }
+    .card{
+        font-size: 1.5em;
+    }
+    #about, #projects, #music p{
+        font-weight: $font-200;
+        font-size: 1em;
+    }
+    #music{
+        #beats, #tracks, #mixmaster{
+            margin-top: 1em;
+            font-weight: $font-200;
+            font-size: 1em;
+        }
+    }
+    #contact{
+        #contact-card{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
